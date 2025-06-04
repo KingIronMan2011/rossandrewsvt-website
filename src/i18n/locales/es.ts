@@ -63,6 +63,7 @@ export const es = {
       loreAnim: "Animación de video de lore",
       loreVoice: "Voz en off del video de lore",
       badges: "Insignias de suscriptor",
+      emotesBadges: "Emotes, banner de Discord, logo e insignias de suscriptor",
       sketch1: "Boceto de modelo 2D",
       sketch2: "Boceto de modelo 2D",
       sketch3: "Boceto de modelo 2D",
@@ -75,11 +76,10 @@ export const es = {
       vexivy404: "Vexivy404",
       JayIllustrator: "JayIllustrator",
       AdelinaArts: "AdelinaArts",
-      funkpunc: "Starfunkie", // Changed from sophiagame34379
       lunamoonof27171: "lunamoonoficial",  // Changed from BaileyTyli341
       Micke_Creation: "Micke_Creation",
       lie_live2d: "lie_live2d",
-      dankpunc: "dankpunc",
+      dankpunc: "Starfunkie",
       Daisy_bunnyy: "Daisy_bunnyy",
       Niwyria: "Niwyria",
       Floophy_Loo: "Floophy_Loo",

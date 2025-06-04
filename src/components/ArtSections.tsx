@@ -89,8 +89,8 @@ const ArtSections = ({ t }: any) => {
       icon: <FaXTwitter size={22} color="#000" />,
     },
     {
-      name: t("artistNames.funkpunc"),
-      description: t("artistDescriptions.emotes"),
+      name: t("artistNames.dankpunc"),
+      description: t("artistDescriptions.emotesBadges"),
       url: "https://x.com/dankpunc",
       icon: <FaXTwitter size={22} color="#000" />,
     },
@@ -110,12 +110,6 @@ const ArtSections = ({ t }: any) => {
       name: t("artistNames.lie_live2d"),
       description: t("artistDescriptions.loreVoice"),
       url: "https://x.com/lie_live2d",
-      icon: <FaXTwitter size={22} color="#000" />,
-    },
-    {
-      name: t("artistNames.dankpunc"),
-      description: t("artistDescriptions.badges"),
-      url: "https://x.com/dankpunc",
       icon: <FaXTwitter size={22} color="#000" />,
     },
   ];
