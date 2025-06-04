@@ -1,4 +1,4 @@
-import { User, MapPin, AtSign } from "lucide-react";
+import { User, MapPin, AtSign, Copy, Check } from "lucide-react";
 
 const ProfileCard = ({ t, handleCopy, copiedField, siteConfig }: any) => (
   <div className="sticky top-8 z-0">
@@ -24,18 +24,14 @@ const ProfileCard = ({ t, handleCopy, copiedField, siteConfig }: any) => (
         <span className="text-base truncate">{t("profile.email")}</span>
         <button
           onClick={() => handleCopy(t("profile.email"), "email")}
-          className="ml-1 p-1 hover:bg-blue-100 dark:hover:bg-blue-800 rounded-full transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600"
+          className="ml-2 flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-500 dark:hover:bg-blue-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600"
           aria-label="Copy to clipboard"
           tabIndex={0}
         >
           {copiedField === "email" ? (
-            <span className="w-4 h-4 text-green-500 font-bold transition-all duration-300">
-              ✓
-            </span>
+            <Check className="w-4 h-4 text-green-500" />
           ) : (
-            <span className="w-4 h-4 text-gray-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300">
-              ⧉
-            </span>
+            <Copy className="w-4 h-4 text-gray-500 group-hover:text-white transition-colors duration-200" />
           )}
         </button>
       </div>
