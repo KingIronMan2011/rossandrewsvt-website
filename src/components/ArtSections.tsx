@@ -79,7 +79,7 @@ const ArtSections = ({ t }: any) => {
     {
       name: t("artistNames.vexivy404"),
       description: t("artistDescriptions.modelArt"),
-      url: "https://x.com/vexivy404",
+      url: "https://x.com/vlutchlab",
       icon: <FaXTwitter size={22} color="#000" />,
     },
     {
