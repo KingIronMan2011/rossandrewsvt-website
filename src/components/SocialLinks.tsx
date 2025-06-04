@@ -12,37 +12,37 @@ const SocialLinks = ({ t }: any) => {
     {
       label: t("profile.links.0.label"),
       url: t("profile.links.0.url"),
-      icon: <FaTwitch size={22} color="#9147ff" />,
-      color: "bg-purple-100 text-purple-700 hover:bg-purple-200",
+      icon: <FaTwitch size={22} />,
+      color: "bg-purple-600 text-white hover:bg-purple-700",
       wide: false,
     },
     {
       label: t("profile.links.1.label"),
       url: t("profile.links.1.url"),
-      icon: <FaXTwitter size={22} color="#000" />,
-      color: "bg-blue-100 text-blue-700 hover:bg-blue-200",
+      icon: <FaXTwitter size={22} />,
+      color: "bg-blue-600 text-white hover:bg-blue-700",
       wide: false,
     },
     {
       label: t("profile.links.2.label"),
       url: t("profile.links.2.url"),
-      icon: <FaYoutube size={22} color="#ff0000" />,
-      color: "bg-red-100 text-red-700 hover:bg-red-200",
+      icon: <FaYoutube size={22} />,
+      color: "bg-red-600 text-white hover:bg-red-700",
       wide: false,
     },
     {
       label: t("profile.links.3.label"),
       url: t("profile.links.3.url"),
-      icon: <FaDiscord size={22} color="#5865F2" />,
-      color: "bg-indigo-100 text-indigo-700 hover:bg-indigo-200",
+      icon: <FaDiscord size={22} />,
+      color: "bg-indigo-600 text-white hover:bg-indigo-700",
       wide: false,
     },
     {
       label: t("profile.links.4.label"),
       url: t("profile.links.4.url"),
-      icon: <FaMoneyBillWave size={24} color="#059669" />,
+      icon: <FaMoneyBillWave size={24} />,
       color:
-        "bg-green-100 text-green-700 hover:bg-green-200 font-bold text-lg border-2 border-green-300",
+        "bg-green-600 text-white hover:bg-green-700 font-bold text-lg border-2 border-green-300",
       wide: true,
     },
   ];
@@ -60,16 +60,16 @@ const SocialLinks = ({ t }: any) => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center justify-center gap-3 px-5 py-4 rounded-2xl font-semibold transition-all duration-300 group ${link.color} shadow-md col-span-1 sm:col-span-2 hover:scale-[1.025] hover:shadow-xl`}
+              className={`flex items-center justify-center gap-3 px-5 py-4 rounded-2xl font-semibold transition-all duration-300 group ${link.color} shadow-md col-span-1 sm:col-span-2 hover:scale-[1.04] hover:shadow-xl`}
               style={{ minHeight: "56px" }}
             >
-              <span className="transition-transform duration-300 group-hover:scale-110">
+              <span className="transition-transform duration-300 group-hover:scale-110 text-white">
                 {link.icon}
               </span>
               <span className="flex-1 text-center">{link.label}</span>
               <ExternalLink
                 size={20}
-                className="opacity-60 group-hover:opacity-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300"
+                className="opacity-80 group-hover:opacity-100 text-white transition-colors duration-300"
               />
             </a>
           ) : (
@@ -78,15 +78,15 @@ const SocialLinks = ({ t }: any) => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center justify-center gap-3 px-5 py-3 rounded-xl font-semibold transition-all duration-300 group ${link.color} shadow-md hover:scale-[1.025] hover:shadow-xl`}
+              className={`flex items-center justify-center gap-3 px-5 py-3 rounded-xl font-semibold transition-all duration-300 group ${link.color} shadow-md hover:scale-[1.04] hover:shadow-xl`}
             >
-              <span className="transition-transform duration-300 group-hover:scale-110">
+              <span className="transition-transform duration-300 group-hover:scale-110 text-white">
                 {link.icon}
               </span>
               <span className="flex-1">{link.label}</span>
               <ExternalLink
                 size={18}
-                className="opacity-60 group-hover:opacity-100 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300"
+                className="opacity-80 group-hover:opacity-100 text-white transition-colors duration-300"
               />
             </a>
           )
