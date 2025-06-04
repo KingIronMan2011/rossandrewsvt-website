@@ -20,7 +20,7 @@ export const de = {
       name: "RossAndrewsVT",
       realName: "Ross Andrews",
       email: "rossandrews.vtuber@gmail.com",
-      location: "Pennsylvania",
+      location: "Transylvania",
       about: [
         "Nur ein freundlicher Halbvampir, der euch alle unterhalten möchte!",
         "Credits für jede*n Künstler*in unten aufgeführt!",
