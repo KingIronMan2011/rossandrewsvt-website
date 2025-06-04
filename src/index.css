@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme transition styles */
+:root {
+  --theme-transition-duration: 0.7s;
+  --theme-transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base transitions for smooth UI */
+*, *::before, *::after {
+  transition:
+    background-color var(--theme-transition-duration) var(--theme-transition-easing),
+    border-color var(--theme-transition-duration) var(--theme-transition-easing),
+    color var(--theme-transition-duration) var(--theme-transition-easing),
+    fill var(--theme-transition-duration) var(--theme-transition-easing),
+    stroke var(--theme-transition-duration) var(--theme-transition-easing),
+    opacity var(--theme-transition-duration) var(--theme-transition-easing),
+    box-shadow var(--theme-transition-duration) var(--theme-transition-easing),
+    transform var(--theme-transition-duration) var(--theme-transition-easing);
+}
+
+/* Disable transitions on page load for instant rendering */
+.preload * {
+  transition: none !important;
+}
+
+/* Theme toggle icon animations */
+#theme-toggle-light,
+#theme-toggle-dark {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark #theme-toggle-light {
+  transform: rotate(-90deg) scale(0);
+}
+#theme-toggle-light {
+  transform: rotate(0) scale(1);
+}
+#theme-toggle-dark {
+  transform: rotate(90deg) scale(0);
+}
+.dark #theme-toggle-dark {
+  transform: rotate(0) scale(1);
+}
+
+/* Smooth backdrop blur transitions */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: backdrop-filter 0.4s var(--theme-transition-easing);
+}
+
+/* Enhanced hover and focus effects */
+.hover\:scale-105,
+.focus\:scale-105:focus {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: scale(1.05);
+}
+
+/* Fade and slide-in animations for smooth appearance */
+.fade-in {
+  animation: fadeIn 0.5s var(--theme-transition-easing);
+}
+.slide-in {
+  animation: slideIn 0.5s var(--theme-transition-easing);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Menu transitions for dropdowns and popovers */
+.menu-enter {
+  opacity: 0;
+  transform: scale(0.97);
+}
+.menu-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 200ms ease-out, transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.menu-exit-active {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 150ms ease-in, transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add this at the end of your CSS file or in a relevant section */
+
+@keyframes spin-slow {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sun-spin {
+  animation: spin-slow 15s linear infinite;
+}
