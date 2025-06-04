@@ -25,7 +25,8 @@ i18n
     fallbackLng: "en",
     supportedLngs: ["en", "de", "es", "fr", "it", "pt", "ro"], // Add Romanian
     detection: {
-      order: ["localStorage", "navigator", "htmlTag"],
+      order: ["navigator", "localStorage"],
+      lookupLocalStorage: "preferred-language",
       caches: ["localStorage"],
     },
     interpolation: { escapeValue: false },

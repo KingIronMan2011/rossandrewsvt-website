@@ -1,6 +1,6 @@
 export const ro = {
   translation: {
-    title: "RossAndrewsVT",
+    title: "RossAndrewsVT's Website",
     panel: {
       buttonText: "Urmărește pe Twitch",
     },
