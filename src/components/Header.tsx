@@ -78,7 +78,14 @@ const Header = ({
               transition: { delay: 0.1, duration: 0.5 },
             }}
           >
-            {t("title") || "RossAndrewsVT"}
+            <a
+              href="/"
+              className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600 rounded"
+              tabIndex={0}
+              aria-label={t("title") || "RossAndrewsVT"}
+            >
+              {t("title") || "RossAndrewsVT"}
+            </a>
           </motion.h1>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4">
