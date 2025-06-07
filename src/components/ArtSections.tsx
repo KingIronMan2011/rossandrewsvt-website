@@ -1,5 +1,29 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { ExternalLink } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const cardVariants = {
+  initial: { opacity: 0, y: 30, scale: 0.97 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 180, damping: 20 },
+  },
+  exit: { opacity: 0, y: 30, scale: 0.97, transition: { duration: 0.18 } },
+  whileHover: {
+    scale: 1.06,
+    boxShadow: "0 12px 36px 0 rgba(59,130,246,0.13)",
+    zIndex: 2,
+    transition: { type: "spring", stiffness: 300, damping: 18 },
+  },
+};
+
+const listVariants = {
+  initial: {},
+  animate: { transition: { staggerChildren: 0.04 } },
+  exit: {},
+};
 
 const ArtistCard = ({
   name,
@@ -12,41 +36,76 @@ const ArtistCard = ({
   url: string;
   icon?: React.ReactNode;
 }) => (
-  <a
+  <motion.a
     href={url}
     target="_blank"
     rel="noopener noreferrer"
     className="group flex flex-col items-start gap-2 p-6 rounded-2xl
       bg-gradient-to-br from-white/90 via-blue-50/80 to-white/90 dark:from-gray-800/90 dark:via-blue-900/60 dark:to-gray-800/90
       border border-gray-200/60 dark:border-gray-700/60
-      shadow-lg hover:shadow-2xl
+      shadow-lg
       transition-all duration-300 ease-out
-      hover:scale-[1.03] hover:bg-blue-50/90 dark:hover:bg-blue-900/40
-      backdrop-blur-sm hover:backdrop-blur-md"
+      backdrop-blur-sm"
     style={{ minHeight: 110 }}
+    variants={cardVariants}
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    whileHover="whileHover"
+    whileFocus="whileHover"
+    layout
   >
-    <div className="flex items-center gap-3 w-full">
+    <motion.div
+      className="flex items-center gap-3 w-full"
+      initial={{ opacity: 0, x: -16 }}
+      animate={{
+        opacity: 1,
+        x: 0,
+        transition: { duration: 0.35, type: "spring", stiffness: 180 },
+      }}
+      exit={{ opacity: 0, x: -16, transition: { duration: 0.15 } }}
+      layout
+    >
       <span className="flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
         {icon || <ExternalLink size={24} />}
       </span>
-      <span className="font-semibold text-lg text-gray-800 dark:text-white break-words
-        transition-colors duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+      <span
+        className="font-semibold text-lg text-gray-800 dark:text-white break-words
+        transition-colors duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400"
+      >
         {name}
       </span>
-    </div>
+    </motion.div>
     {description && (
-      <span className="block text-base text-gray-600 dark:text-gray-300 mt-1 break-words
-        transition-colors duration-300">
+      <motion.span
+        className="block text-base text-gray-600 dark:text-gray-300 mt-1 break-words
+        transition-colors duration-300"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.4, type: "spring", stiffness: 140 },
+        }}
+        exit={{ opacity: 0, y: 10, transition: { duration: 0.15 } }}
+        layout
+      >
         {description}
-      </span>
+      </motion.span>
     )}
-    <ExternalLink
-      size={20}
-      className="opacity-60 mt-2 self-end transition-all duration-300
-        group-hover:opacity-100 group-hover:text-blue-500 dark:group-hover:text-blue-400
-        group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-    />
-  </a>
+    <motion.div
+      initial={{ opacity: 0, x: 10 }}
+      animate={{ opacity: 0.6, x: 0, transition: { duration: 0.4 } }}
+      exit={{ opacity: 0, x: 10, transition: { duration: 0.15 } }}
+      whileHover={{ opacity: 1, x: 4, y: -4, color: "#3b82f6" }}
+      className="mt-2 self-end transition-all duration-300"
+      layout
+    >
+      <ExternalLink
+        size={20}
+        className="transition-all duration-300 group-hover:text-blue-500 dark:group-hover:text-blue-400"
+      />
+    </motion.div>
+  </motion.a>
 );
 
 const Section = ({
@@ -57,20 +116,45 @@ const Section = ({
   children: React.ReactNode;
 }) => (
   <section className="mt-14 relative z-0 px-2 sm:px-0">
-    <div className="bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-md border border-gray-100/60 dark:border-gray-800/60 py-8 px-2 sm:px-8 transition-all duration-500">
-      <h3
+    <motion.div
+      className="bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-md border border-gray-100/60 dark:border-gray-800/60 py-8 px-2 sm:px-8 transition-all duration-500"
+      initial={{ opacity: 0, y: 24 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { type: "spring", stiffness: 100, damping: 18 },
+      }}
+      exit={{ opacity: 0, y: 24, transition: { duration: 0.18 } }}
+      layout
+    >
+      <motion.h3
         className="text-lg md:text-xl font-bold text-gray-800 dark:text-white mb-7
         text-center transition-colors duration-300
         after:content-[''] after:block after:w-24 after:h-1 after:mx-auto after:mt-2
         after:bg-gradient-to-r after:from-blue-500/0 after:via-blue-500 after:to-blue-500/0
         dark:after:from-blue-400/0 dark:after:via-blue-400 dark:after:to-blue-400/0"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, type: "spring", stiffness: 120 },
+        }}
+        exit={{ opacity: 0, y: -10, transition: { duration: 0.18 } }}
+        layout
       >
         {title}
-      </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 max-w-3xl mx-auto">
-        {children}
-      </div>
-    </div>
+      </motion.h3>
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 max-w-3xl mx-auto"
+        variants={listVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        layout
+      >
+        <AnimatePresence>{children}</AnimatePresence>
+      </motion.div>
+    </motion.div>
   </section>
 );
 

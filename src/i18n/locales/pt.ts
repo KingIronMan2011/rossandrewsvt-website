@@ -76,7 +76,7 @@ export const pt = {
       vexivy404: "Vexivy404",
       JayIllustrator: "JayIllustrator",
       AdelinaArts: "AdelinaArts",
-      lunamoonof27171: "lunamoonoficial",  // Changed from BaileyTyli341
+      lunamoonof27171: "lunamoonoficial", // Changed from BaileyTyli341
       Micke_Creation: "Micke_Creation",
       lie_live2d: "lie_live2d",
       dankpunc: "Starfunkie",
@@ -86,6 +86,52 @@ export const pt = {
       Bellestissa: "Bellestissa",
       LenitaLenK: "LenitaLenK",
       seysech: "seysech",
+    },
+    privacy: {
+      title: "Política de Privacidade",
+      introductionTitle: "Introdução",
+      introductionText:
+        "Este é um site pessoal e não coleta, armazena ou compartilha nenhum dado pessoal dos visitantes.",
+      informationCollectionTitle: "Coleta de Informações",
+      informationCollectionText:
+        "Não coletamos nenhuma informação pessoal sua quando você visita este site.",
+      useOfInformationTitle: "Uso das Informações",
+      useOfInformationText:
+        "Como nenhuma informação é coletada, nenhuma informação é usada ou processada de qualquer forma.",
+      dataSecurityTitle: "Segurança dos Dados",
+      dataSecurityText:
+        "Como nenhum dado pessoal é coletado ou armazenado, não há riscos de segurança em relação às suas informações pessoais neste site.",
+      contactUsTitle: "Contato",
+      contactUsText:
+        "Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco em",
+    },
+    terms: {
+      title: "Termos de Serviço",
+      lastUpdated: "Última atualização:",
+      intro:
+        "Ao acessar ou usar este site, você concorda em cumprir estes Termos de Serviço. Se você não concorda com qualquer parte destes termos, por favor, não utilize o site.",
+      useOfContentTitle: "Uso do Conteúdo",
+      useOfContent1:
+        "Todo o conteúdo deste site é para uso pessoal e não comercial, salvo indicação em contrário.",
+      useOfContent2:
+        "Você não pode copiar, reproduzir ou distribuir o conteúdo sem permissão.",
+      userConductTitle: "Conduta do Usuário",
+      userConduct1:
+        "Não utilize este site para fins ilegais ou para prejudicar outros.",
+      userConduct2:
+        "Não tente obter acesso não autorizado a qualquer parte do site.",
+      disclaimerTitle: "Aviso Legal",
+      disclaimerText:
+        'Este site é fornecido "como está", sem garantias de qualquer tipo. Não garantimos a precisão ou integridade de qualquer conteúdo.',
+      liabilityTitle: "Limitação de Responsabilidade",
+      liabilityText:
+        "Não somos responsáveis por quaisquer danos ou perdas resultantes do uso deste site.",
+      changesTitle: "Alterações nos Termos",
+      changesText:
+        "Podemos atualizar estes Termos de Serviço a qualquer momento. O uso continuado do site significa que você aceita os termos atualizados.",
+      contactTitle: "Contato",
+      contactText:
+        "Se você tiver alguma dúvida sobre estes Termos, entre em contato conosco em:",
     },
   },
 };

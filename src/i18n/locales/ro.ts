@@ -67,5 +67,51 @@ export const ro = {
       LenitaLenK: "LenitaLenK",
       seysech: "seysech",
     },
+    privacy: {
+      title: "Politica de Confidențialitate",
+      introductionTitle: "Introducere",
+      introductionText:
+        "Acesta este un site personal și nu colectează, stochează sau partajează date personale ale vizitatorilor.",
+      informationCollectionTitle: "Colectarea Informațiilor",
+      informationCollectionText:
+        "Nu colectăm nicio informație personală de la dvs. când vizitați acest site.",
+      useOfInformationTitle: "Utilizarea Informațiilor",
+      useOfInformationText:
+        "Deoarece nu se colectează informații, nici-o informație nu este folosită sau procesată în niciun fel.",
+      dataSecurityTitle: "Securitatea Datelor",
+      dataSecurityText:
+        "Deoarece nu se colectează sau stochează date personale, nu există riscuri de securitate privind informațiile dvs. personale pe acest site.",
+      contactUsTitle: "Contact",
+      contactUsText:
+        "Dacă aveți întrebări despre această Politică de Confidențialitate, vă rugăm să ne contactați la",
+    },
+    terms: {
+      title: "Termeni și Condiții",
+      lastUpdated: "Ultima actualizare:",
+      intro:
+        "Prin accesarea sau utilizarea acestui site, sunteți de acord cu acești Termeni și Condiții. Dacă nu sunteți de acord cu oricare parte a acestor termeni, vă rugăm să nu utilizați site-ul.",
+      useOfContentTitle: "Utilizarea Conținutului",
+      useOfContent1:
+        "Tot conținutul de pe acest site este destinat doar uzului personal, necomercial, cu excepția cazului în care se specifică altfel.",
+      useOfContent2:
+        "Nu aveți voie să copiați, reproduceți sau distribuiți conținutul fără permisiune.",
+      userConductTitle: "Conduita Utilizatorului",
+      userConduct1:
+        "Nu utilizați acest site în scopuri ilegale sau pentru a face rău altora.",
+      userConduct2:
+        "Nu încercați să obțineți acces neautorizat la nicio parte a site-ului.",
+      disclaimerTitle: "Declinarea Responsabilității",
+      disclaimerText:
+        'Acest site este furnizat "ca atare" fără nici-o garanție de niciun fel. Nu garantăm acuratețea sau completitudinea conținutului.',
+      liabilityTitle: "Limitarea Răspunderii",
+      liabilityText:
+        "Nu suntem răspunzători pentru niciun fel de daune sau pierderi rezultate din utilizarea acestui site.",
+      changesTitle: "Modificări ale Termenilor",
+      changesText:
+        "Putem actualiza acești Termeni și Condiții oricând. Continuarea utilizării site-ului înseamnă că acceptați termenii actualizați.",
+      contactTitle: "Contact",
+      contactText:
+        "Dacă aveți întrebări despre acești Termeni, vă rugăm să ne contactați la:",
+    },
   },
 };

@@ -6,6 +6,33 @@ import {
   FaMoneyBillWave,
 } from "react-icons/fa6";
 import { ExternalLink } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const linkVariants = {
+  initial: { opacity: 0, y: 24, scale: 0.96 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.32,
+      type: "spring",
+      stiffness: 120,
+      damping: 16,
+      mass: 0.7,
+    },
+  },
+  exit: { opacity: 0, y: 24, scale: 0.96, transition: { duration: 0.18 } },
+  whileHover: {
+    scale: 1.08,
+    boxShadow: "0 8px 32px 0 rgba(59,130,246,0.13)",
+    transition: { type: "spring", stiffness: 260, damping: 18 },
+  },
+  whileTap: {
+    scale: 0.97,
+    transition: { type: "spring", stiffness: 300, damping: 22 },
+  },
+};
 
 const SocialLinks = ({ t }: any) => {
   const links = [
@@ -49,49 +76,103 @@ const SocialLinks = ({ t }: any) => {
 
   return (
     <div className="mt-10 z-0 relative">
-      <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white mb-5 transition-all duration-500 ease-in-out tracking-tight">
+      <motion.h3
+        className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white mb-5 transition-all duration-500 ease-in-out tracking-tight"
+        initial={{ opacity: 0, y: -12 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.6,
+            type: "spring",
+            stiffness: 100,
+            damping: 18,
+          },
+        }}
+      >
         {t("sections.socialLinks", "Social Links")}
-      </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {links.map((link) =>
-          link.wide ? (
-            <a
-              key={link.label}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`flex items-center justify-center gap-3 px-5 py-4 rounded-2xl font-semibold transition-all duration-300 group ${link.color} shadow-md col-span-1 sm:col-span-2 hover:scale-[1.04] hover:shadow-xl`}
-              style={{ minHeight: "56px" }}
-            >
-              <span className="transition-transform duration-300 group-hover:scale-110 text-white">
-                {link.icon}
-              </span>
-              <span className="flex-1 text-center">{link.label}</span>
-              <ExternalLink
-                size={20}
-                className="opacity-80 group-hover:opacity-100 text-white transition-colors duration-300"
-              />
-            </a>
-          ) : (
-            <a
-              key={link.label}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`flex items-center justify-center gap-3 px-5 py-3 rounded-xl font-semibold transition-all duration-300 group ${link.color} shadow-md hover:scale-[1.04] hover:shadow-xl`}
-            >
-              <span className="transition-transform duration-300 group-hover:scale-110 text-white">
-                {link.icon}
-              </span>
-              <span className="flex-1">{link.label}</span>
-              <ExternalLink
-                size={18}
-                className="opacity-80 group-hover:opacity-100 text-white transition-colors duration-300"
-              />
-            </a>
-          )
-        )}
-      </div>
+      </motion.h3>
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 gap-5"
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <AnimatePresence>
+          {links.map((link) =>
+            link.wide ? (
+              <motion.a
+                key={link.label}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center justify-center gap-3 px-5 py-4 rounded-2xl font-semibold transition-all duration-300 group ${link.color} shadow-md col-span-1 sm:col-span-2`}
+                style={{ minHeight: "56px" }}
+                variants={linkVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                whileHover="whileHover"
+                whileTap="whileTap"
+                layout
+              >
+                <motion.span
+                  className="transition-transform duration-300 group-hover:scale-110 text-white"
+                  layout
+                  transition={{ type: "spring", stiffness: 200, damping: 18 }}
+                >
+                  {link.icon}
+                </motion.span>
+                <motion.span
+                  className="flex-1 text-center"
+                  layout
+                  transition={{ type: "spring", stiffness: 200, damping: 18 }}
+                >
+                  {link.label}
+                </motion.span>
+                <ExternalLink
+                  size={20}
+                  className="opacity-80 group-hover:opacity-100 text-white transition-colors duration-300"
+                />
+              </motion.a>
+            ) : (
+              <motion.a
+                key={link.label}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center justify-center gap-3 px-5 py-3 rounded-xl font-semibold transition-all duration-300 group ${link.color} shadow-md`}
+                variants={linkVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                whileHover="whileHover"
+                whileTap="whileTap"
+                layout
+              >
+                <motion.span
+                  className="transition-transform duration-300 group-hover:scale-110 text-white"
+                  layout
+                  transition={{ type: "spring", stiffness: 200, damping: 18 }}
+                >
+                  {link.icon}
+                </motion.span>
+                <motion.span
+                  className="flex-1"
+                  layout
+                  transition={{ type: "spring", stiffness: 200, damping: 18 }}
+                >
+                  {link.label}
+                </motion.span>
+                <ExternalLink
+                  size={18}
+                  className="opacity-80 group-hover:opacity-100 text-white transition-colors duration-300"
+                />
+              </motion.a>
+            )
+          )}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 };

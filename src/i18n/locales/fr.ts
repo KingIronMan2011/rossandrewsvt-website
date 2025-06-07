@@ -76,7 +76,7 @@ export const fr = {
       vexivy404: "Vexivy404",
       JayIllustrator: "JayIllustrator",
       AdelinaArts: "AdelinaArts",
-      lunamoonof27171: "lunamoonoficial",  // Changed from BaileyTyli341
+      lunamoonof27171: "lunamoonoficial", // Changed from BaileyTyli341
       Micke_Creation: "Micke_Creation",
       lie_live2d: "lie_live2d",
       dankpunc: "Starfunkie",
@@ -86,6 +86,52 @@ export const fr = {
       Bellestissa: "Bellestissa",
       LenitaLenK: "LenitaLenK",
       seysech: "seysech",
+    },
+    privacy: {
+      title: "Politique de Confidentialité",
+      introductionTitle: "Introduction",
+      introductionText:
+        "Ceci est un site personnel et il ne collecte, ne stocke ni ne partage aucune donnée personnelle des visiteurs.",
+      informationCollectionTitle: "Collecte d'informations",
+      informationCollectionText:
+        "Nous ne collectons aucune information personnelle lorsque vous visitez ce site web.",
+      useOfInformationTitle: "Utilisation des informations",
+      useOfInformationText:
+        "Aucune information n'étant collectée, aucune information n'est utilisée ou traitée de quelque manière que ce soit.",
+      dataSecurityTitle: "Sécurité des données",
+      dataSecurityText:
+        "Aucune donnée personnelle n'étant collectée ou stockée, il n'y a aucun risque de sécurité concernant vos informations personnelles sur ce site.",
+      contactUsTitle: "Contact",
+      contactUsText:
+        "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter à",
+    },
+    terms: {
+      title: "Conditions d'utilisation",
+      lastUpdated: "Dernière mise à jour :",
+      intro:
+        "En accédant ou en utilisant ce site web, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas une partie de ces conditions, veuillez ne pas utiliser le site.",
+      useOfContentTitle: "Utilisation du contenu",
+      useOfContent1:
+        "Tout le contenu de ce site web est destiné à un usage personnel et non commercial, sauf indication contraire.",
+      useOfContent2:
+        "Vous ne pouvez pas copier, reproduire ou distribuer le contenu sans autorisation.",
+      userConductTitle: "Conduite de l'utilisateur",
+      userConduct1:
+        "N'utilisez pas ce site web à des fins illégales ou pour nuire à autrui.",
+      userConduct2:
+        "N'essayez pas d'obtenir un accès non autorisé à une partie du site.",
+      disclaimerTitle: "Avertissement",
+      disclaimerText:
+        "Ce site web est fourni \"tel quel\" sans aucune garantie de quelque nature que ce soit. Nous ne garantissons pas l'exactitude ou l'exhaustivité du contenu.",
+      liabilityTitle: "Limitation de responsabilité",
+      liabilityText:
+        "Nous ne sommes pas responsables des dommages ou pertes résultant de votre utilisation de ce site web.",
+      changesTitle: "Modifications des conditions",
+      changesText:
+        "Nous pouvons mettre à jour ces conditions d'utilisation à tout moment. L'utilisation continue du site signifie que vous acceptez les conditions mises à jour.",
+      contactTitle: "Contact",
+      contactText:
+        "Si vous avez des questions concernant ces conditions, veuillez nous contacter à :",
     },
   },
 };
