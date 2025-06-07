@@ -24,12 +24,17 @@ const ProfileCard = ({ t, handleCopy, copiedField, siteConfig }: any) => (
         <span className="text-base truncate">{t("profile.email")}</span>
         <button
           onClick={() => handleCopy(t("profile.email"), "email")}
-          className="ml-2 flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-500 dark:hover:bg-blue-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600"
+          className={`ml-2 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600
+            ${
+              copiedField === "email"
+                ? "bg-gray-200 dark:bg-gray-700 scale-110"
+                : "bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 hover:scale-105"
+            }`}
           aria-label="Copy to clipboard"
           tabIndex={0}
         >
           {copiedField === "email" ? (
-            <Check className="w-4 h-4 text-green-500" />
+            <Check className="w-4 h-4 text-green-500 transition-colors duration-200" />
           ) : (
             <Copy className="w-4 h-4 text-gray-500 group-hover:text-white transition-colors duration-200" />
           )}
