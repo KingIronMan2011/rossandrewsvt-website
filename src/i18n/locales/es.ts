@@ -133,5 +133,9 @@ export const es = {
       contactText:
         "Si tiene alguna pregunta sobre estos Términos, por favor contáctenos en:",
     },
+    footer: {
+      rights: "Todos los derechos reservados.",
+      madeBy: "Hecho por",
+    },
   },
 };

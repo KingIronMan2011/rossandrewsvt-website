@@ -2,7 +2,11 @@ import { motion } from "framer-motion";
 
 const footerVariants = {
   initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80, damping: 18 } },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 80, damping: 18 },
+  },
 };
 
 const linkVariants = {
@@ -34,28 +38,28 @@ const Footer = ({ t }: any) => (
       . {t("footer.rights", "All rights reserved.")}{" "}
     </motion.div>
     <div className="flex gap-6 mt-1">
-    {[
-      {
-        href: "/privacy-policy",
-        label: t("privacyPolicy", "Privacy Policy"),
-      },
-      {
-        href: "/terms-of-service",
-        label: t("termsOfService", "Terms of Service"),
-      },
-    ].map((link, i) => (
-      <motion.a
-        key={link.href}
-        href={link.href}
-        className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-        variants={linkVariants}
-        initial="initial"
-        animate="animate"
-        custom={i}
-      >
-        {link.label}
-      </motion.a>
-    ))}
+      {[
+        {
+          href: "/privacy-policy",
+          label: t("privacyPolicy", "Privacy Policy"),
+        },
+        {
+          href: "/terms-of-service",
+          label: t("termsOfService", "Terms of Service"),
+        },
+      ].map((link, i) => (
+        <motion.a
+          key={link.href}
+          href={link.href}
+          className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+          variants={linkVariants}
+          initial="initial"
+          animate="animate"
+          custom={i}
+        >
+          {link.label}
+        </motion.a>
+      ))}
       <motion.span
         className="text-gray-300 dark:text-gray-600"
         initial={{ opacity: 0 }}
@@ -65,6 +69,22 @@ const Footer = ({ t }: any) => (
         |
       </motion.span>
     </div>
+    <motion.div
+      className="mt-2 text-xs text-gray-400 dark:text-gray-500"
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4, duration: 0.4 }}
+    >
+      {t("footer.madeBy", "Made by")}{" "}
+      <a
+        href="https://github.com/KingIronMan2011"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-semibold hover:underline text-blue-600 dark:text-blue-400"
+      >
+        KingIronMan2011
+      </a>
+    </motion.div>
   </motion.footer>
 );
 

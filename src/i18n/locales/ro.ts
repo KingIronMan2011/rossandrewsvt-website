@@ -113,5 +113,9 @@ export const ro = {
       contactText:
         "Dacă aveți întrebări despre acești Termeni, vă rugăm să ne contactați la:",
     },
+    footer: {
+      rights: "Toate drepturile rezervate.",
+      madeBy: "Realizat de",
+    },
   },
 };

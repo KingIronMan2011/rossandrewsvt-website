@@ -133,5 +133,9 @@ export const it = {
       contactText:
         "Se hai domande su questi Termini, ti preghiamo di contattarci a:",
     },
+    footer: {
+      rights: "Tutti i diritti riservati.",
+      madeBy: "Creato da",
+    },
   },
 };
