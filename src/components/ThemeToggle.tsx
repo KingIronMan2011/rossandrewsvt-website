@@ -18,8 +18,6 @@ const ThemeToggle: React.FC = () => {
     },
   };
 
-  // Framer Motion for icon rotation (for dark mode sun)
-
   // Framer Motion hover/tap animation for the toggle button (mobile and desktop)
   const buttonMotion =
     theme === "light"
