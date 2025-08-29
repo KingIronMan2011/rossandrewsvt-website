@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Routes, Route } from "react-router-dom";
 import "./i18n";
@@ -14,76 +14,23 @@ import Terms from "./pages/Terms";
 function App() {
   const { t, i18n } = useTranslation();
   const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      const savedMode = localStorage.getItem("darkMode");
-      if (savedMode !== null) {
-        return JSON.parse(savedMode);
-      }
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return false;
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode !== null
+      ? JSON.parse(savedMode)
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
 
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const langMenuRef = useRef<HTMLDivElement>(null);
-
-  // Force re-render on language change
-  const [, setLang] = useState(i18n.language);
-  useEffect(() => {
-    const handler = () => setLang(i18n.language);
-    i18n.on("languageChanged", handler);
-    return () => i18n.off("languageChanged", handler);
-  }, [i18n]);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => setIsVisible(true), []);
-
-  useEffect(() => {
+    setIsVisible(true);
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        langMenuRef.current &&
-        !langMenuRef.current.contains(event.target as Node)
-      ) {
-        setIsLangMenuOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  // Handler functions
   const handlePanelClick = () => {
     window.open(siteConfig.panel.url, "_blank", "noopener,noreferrer");
-  };
-
-  const toggleDarkMode = () => setDarkMode((prev: any) => !prev);
-
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-    localStorage.setItem("i18nextLng", lang);
-    setIsLangMenuOpen(false);
-    setIsMobileMenuOpen(false);
   };
 
   const handleCopy = (text: string, field: string) => {
@@ -91,9 +38,6 @@ function App() {
     setCopiedField(field);
     setTimeout(() => setCopiedField(null), 2000);
   };
-
-  // Data for sections
-  const languageCodes = ["en", "de", "es", "fr", "it", "pt"];
 
   return (
     <div
@@ -114,14 +58,7 @@ function App() {
           t={t}
           i18n={i18n}
           darkMode={darkMode}
-          toggleDarkMode={toggleDarkMode}
-          isLangMenuOpen={isLangMenuOpen}
-          setIsLangMenuOpen={setIsLangMenuOpen}
-          isMobileMenuOpen={isMobileMenuOpen}
-          setIsMobileMenuOpen={setIsMobileMenuOpen}
-          langMenuRef={langMenuRef}
-          languageCodes={languageCodes}
-          changeLanguage={changeLanguage}
+          toggleDarkMode={() => setDarkMode((prev: boolean) => !prev)}
           handlePanelClick={handlePanelClick}
         />
 
