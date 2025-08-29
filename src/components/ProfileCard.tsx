@@ -1,17 +1,18 @@
 import { User, MapPin, AtSign, Copy, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import type { Variants } from "framer-motion";
 
-const copyButtonVariants = {
+const copyButtonVariants: Variants = {
   initial: { scale: 1, rotate: 0 },
   hover: {
     scale: 1.12,
     rotate: 8,
-    transition: { type: "spring", stiffness: 300, damping: 18 },
+    transition: { type: "spring" as const, stiffness: 300, damping: 18 },
   },
   tap: {
     scale: 0.95,
     rotate: -8,
-    transition: { type: "spring", stiffness: 300, damping: 18 },
+    transition: { type: "spring" as const, stiffness: 300, damping: 18 },
   },
 };
 
@@ -20,7 +21,7 @@ const iconVariants = {
   copied: {
     opacity: 1,
     scale: 1.2,
-    transition: { type: "spring", stiffness: 400, damping: 18 },
+    transition: { type: "spring" as "spring", stiffness: 400, damping: 18 },
   },
   exit: { opacity: 0, scale: 0.8, transition: { duration: 0.15 } },
 };

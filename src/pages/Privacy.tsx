@@ -1,25 +1,31 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import type { Variants } from "framer-motion";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 120, damping: 18 },
+    transition: { type: "spring" as const, stiffness: 120, damping: 18 },
   },
 };
 
-const headingVariants = {
+const headingVariants: Variants = {
   hidden: { opacity: 0, y: -16 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { delay: 0.1, duration: 0.5, type: "spring", stiffness: 120 },
+    transition: {
+      delay: 0.1,
+      duration: 0.5,
+      type: "spring" as const,
+      stiffness: 120,
+    },
   },
 };
 
-const sectionVariants = {
+const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 16 },
   visible: (i: number) => ({
     opacity: 1,
@@ -27,7 +33,7 @@ const sectionVariants = {
     transition: {
       delay: 0.15 + i * 0.06,
       duration: 0.4,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 120,
     },
   }),
@@ -45,7 +51,7 @@ const Privacy = () => {
         <p>
           {t(
             "privacy.introductionText",
-            "This is a personal website and it does not collect, store, or share any personal data from visitors."
+            "This is a personal website and it does not collect, store, or share any personal data from visitors.",
           )}
         </p>
       </>
@@ -58,7 +64,7 @@ const Privacy = () => {
         <p>
           {t(
             "privacy.informationCollectionText",
-            "We do not collect any personal information from you when you visit this website."
+            "We do not collect any personal information from you when you visit this website.",
           )}
         </p>
       </>
@@ -71,7 +77,7 @@ const Privacy = () => {
         <p>
           {t(
             "privacy.useOfInformationText",
-            "Since no information is collected, no information is used or processed in any way."
+            "Since no information is collected, no information is used or processed in any way.",
           )}
         </p>
       </>
@@ -84,7 +90,7 @@ const Privacy = () => {
         <p>
           {t(
             "privacy.dataSecurityText",
-            "As no personal data is collected or stored, there are no security risks regarding your personal information on this website."
+            "As no personal data is collected or stored, there are no security risks regarding your personal information on this website.",
           )}
         </p>
       </>
@@ -97,7 +103,7 @@ const Privacy = () => {
         <p>
           {t(
             "privacy.contactUsText",
-            "If you have any questions about this Privacy Policy, please contact us at"
+            "If you have any questions about this Privacy Policy, please contact us at",
           ) + " "}
           <a
             href="mailto:rossandrews.vtuber@gmail.com"

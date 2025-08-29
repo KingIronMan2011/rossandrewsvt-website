@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const footerVariants = {
+const footerVariants: any = {
   initial: { opacity: 0, y: 30 },
   animate: {
     opacity: 1,
@@ -14,7 +14,7 @@ const linkVariants = {
   animate: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.2 + i * 0.08, duration: 0.4, type: "tween" },
+    transition: { delay: 0.2 + i * 0.08, duration: 0.4 },
   }),
 };
 

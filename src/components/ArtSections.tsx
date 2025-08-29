@@ -2,20 +2,22 @@ import { FaXTwitter } from "react-icons/fa6";
 import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const cardVariants = {
+import type { Variants } from "framer-motion";
+
+const cardVariants: Variants = {
   initial: { opacity: 0, y: 30, scale: 0.97 },
   animate: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring", stiffness: 180, damping: 20 },
+    transition: { type: "spring" as const, stiffness: 180, damping: 20 },
   },
   exit: { opacity: 0, y: 30, scale: 0.97, transition: { duration: 0.18 } },
   whileHover: {
     scale: 1.06,
     boxShadow: "0 12px 36px 0 rgba(59,130,246,0.13)",
     zIndex: 2,
-    transition: { type: "spring", stiffness: 300, damping: 18 },
+    transition: { type: "spring" as const, stiffness: 300, damping: 18 },
   },
 };
 

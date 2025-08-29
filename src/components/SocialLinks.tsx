@@ -16,7 +16,7 @@ const linkVariants = {
     scale: 1,
     transition: {
       duration: 0.32,
-      type: "spring",
+      type: "spring" as "spring",
       stiffness: 120,
       damping: 16,
       mass: 0.7,
@@ -26,11 +26,11 @@ const linkVariants = {
   whileHover: {
     scale: 1.03, // Reduced hover scale
     boxShadow: "0 8px 32px 0 rgba(59,130,246,0.13)",
-    transition: { type: "spring", stiffness: 260, damping: 18 },
+    transition: { type: "spring" as "spring", stiffness: 260, damping: 18 },
   },
   whileTap: {
     scale: 0.97,
-    transition: { type: "spring", stiffness: 300, damping: 22 },
+    transition: { type: "spring" as "spring", stiffness: 300, damping: 22 },
   },
 };
 
@@ -169,7 +169,7 @@ const SocialLinks = ({ t }: any) => {
                   className="opacity-80 group-hover:opacity-100 text-white transition-colors duration-300"
                 />
               </motion.a>
-            )
+            ),
           )}
         </AnimatePresence>
       </motion.div>

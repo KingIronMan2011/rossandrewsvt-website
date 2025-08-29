@@ -38,7 +38,7 @@ type LanguageContextType = {
 
 // Create the language context
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 // Provider component to wrap the app and provide language state/functions

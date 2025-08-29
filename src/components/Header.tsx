@@ -10,7 +10,7 @@ const dropdownVariants = {
     y: 0,
     scale: 1,
     pointerEvents: "auto" as const,
-    transition: { type: "spring", stiffness: 220, damping: 18 },
+    transition: { type: "spring" as "spring", stiffness: 220, damping: 18 },
   },
 };
 
@@ -21,7 +21,7 @@ const mobileMenuVariants = {
     y: 0,
     pointerEvents: "auto" as const,
     height: "auto",
-    transition: { type: "spring", stiffness: 180, damping: 22 },
+    transition: { type: "spring" as const, stiffness: 180, damping: 22 },
   },
 };
 

@@ -1,25 +1,31 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import type { Variants } from "framer-motion";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 120, damping: 18 },
+    transition: { type: "spring" as const, stiffness: 120, damping: 18 },
   },
 };
 
-const headingVariants = {
+const headingVariants: Variants = {
   hidden: { opacity: 0, y: -16 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { delay: 0.1, duration: 0.5, type: "spring", stiffness: 120 },
+    transition: {
+      delay: 0.1,
+      duration: 0.5,
+      type: "spring" as const,
+      stiffness: 120,
+    },
   },
 };
 
-const sectionVariants = {
+const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 16 },
   visible: (i: number) => ({
     opacity: 1,
@@ -27,7 +33,7 @@ const sectionVariants = {
     transition: {
       delay: 0.15 + i * 0.06,
       duration: 0.4,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 120,
     },
   }),
@@ -46,7 +52,7 @@ const Terms = () => {
       <p>
         {t(
           "terms.intro",
-          "By accessing or using this website, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the site."
+          "By accessing or using this website, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the site.",
         )}
       </p>
     ),
@@ -59,13 +65,13 @@ const Terms = () => {
           <li>
             {t(
               "terms.useOfContent1",
-              "All content on this website is for personal, non-commercial use unless otherwise stated."
+              "All content on this website is for personal, non-commercial use unless otherwise stated.",
             )}
           </li>
           <li>
             {t(
               "terms.useOfContent2",
-              "You may not copy, reproduce, or distribute content without permission."
+              "You may not copy, reproduce, or distribute content without permission.",
             )}
           </li>
         </ul>
@@ -80,13 +86,13 @@ const Terms = () => {
           <li>
             {t(
               "terms.userConduct1",
-              "Do not use this website for unlawful purposes or to harm others."
+              "Do not use this website for unlawful purposes or to harm others.",
             )}
           </li>
           <li>
             {t(
               "terms.userConduct2",
-              "Do not attempt to gain unauthorized access to any part of the site."
+              "Do not attempt to gain unauthorized access to any part of the site.",
             )}
           </li>
         </ul>
@@ -100,7 +106,7 @@ const Terms = () => {
         <p>
           {t(
             "terms.disclaimerText",
-            'This website is provided "as is" without warranties of any kind. We do not guarantee the accuracy or completeness of any content.'
+            'This website is provided "as is" without warranties of any kind. We do not guarantee the accuracy or completeness of any content.',
           )}
         </p>
       </>
@@ -113,7 +119,7 @@ const Terms = () => {
         <p>
           {t(
             "terms.liabilityText",
-            "We are not liable for any damages or losses resulting from your use of this website."
+            "We are not liable for any damages or losses resulting from your use of this website.",
           )}
         </p>
       </>
@@ -126,7 +132,7 @@ const Terms = () => {
         <p>
           {t(
             "terms.changesText",
-            "We may update these Terms of Service at any time. Continued use of the site means you accept the updated terms."
+            "We may update these Terms of Service at any time. Continued use of the site means you accept the updated terms.",
           )}
         </p>
       </>
@@ -139,7 +145,7 @@ const Terms = () => {
         <p>
           {t(
             "terms.contactText",
-            "If you have any questions about these Terms, please contact us at:"
+            "If you have any questions about these Terms, please contact us at:",
           )}{" "}
           <a
             href="mailto:rossandrews.vtuber@gmail.com"
