@@ -9,7 +9,7 @@ import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const linkVariants = {
-  initial: { opacity: 0, y: 24, scale: 0.98 }, // Reduced initial scale
+  initial: { opacity: 0, y: 24, scale: 0.98 },
   animate: {
     opacity: 1,
     y: 0,
@@ -22,9 +22,9 @@ const linkVariants = {
       mass: 0.7,
     },
   },
-  exit: { opacity: 0, y: 24, scale: 0.98, transition: { duration: 0.18 } }, // Reduced exit scale
+  exit: { opacity: 0, y: 24, scale: 0.98, transition: { duration: 0.18 } },
   whileHover: {
-    scale: 1.03, // Reduced hover scale
+    scale: 1.03,
     boxShadow: "0 8px 32px 0 rgba(59,130,246,0.13)",
     transition: { type: "spring" as "spring", stiffness: 260, damping: 18 },
   },

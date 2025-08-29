@@ -13,7 +13,7 @@ function Root() {
     const handleLoad = () => {
       setTimeout(() => {
         document.documentElement.classList.remove("preload");
-      }, 150); // Slightly faster for snappier feel
+      }, 150);
     };
     window.addEventListener("load", handleLoad);
     return () => window.removeEventListener("load", handleLoad);

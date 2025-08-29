@@ -20,12 +20,12 @@ i18n
       fr: { translation: fr.translation },
       it: { translation: it.translation },
       pt: { translation: pt.translation },
-      ro: { translation: ro.translation }, // Add Romanian
+      ro: { translation: ro.translation },
     },
     fallbackLng: "en",
-    supportedLngs: ["en", "de", "es", "fr", "it", "pt", "ro"], // Add Romanian
+    supportedLngs: ["en", "de", "es", "fr", "it", "pt", "ro"],
     detection: {
-      order: ["navigator", "localStorage"],
+      order: ["navigator", "localStorage", "htmlTag"],
       lookupLocalStorage: "preferred-language",
       caches: ["localStorage"],
     },
