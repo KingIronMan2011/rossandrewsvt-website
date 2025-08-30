@@ -47,11 +47,11 @@ const Footer = ({ t }: any) => (
       {[
         {
           to: "/privacy-policy",
-          label: t("privacyPolicy", "Privacy Policy"),
+          label: t("privacy.title", "Privacy Policy"),
         },
         {
           to: "/terms-of-service",
-          label: t("termsOfService", "Terms of Service"),
+          label: t("terms.title", "Terms of Service"),
         },
       ].map((link, i) => (
         <motion.div
