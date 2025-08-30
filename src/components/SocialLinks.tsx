@@ -16,7 +16,7 @@ const linkVariants = {
     scale: 1,
     transition: {
       duration: 0.32,
-      type: "spring" as "spring",
+      type: "spring" as const,
       stiffness: 120,
       damping: 16,
       mass: 0.7,
@@ -24,13 +24,13 @@ const linkVariants = {
   },
   exit: { opacity: 0, y: 24, scale: 0.98, transition: { duration: 0.18 } },
   whileHover: {
-    scale: 1.03,
-    boxShadow: "0 8px 32px 0 rgba(59,130,246,0.13)",
-    transition: { type: "spring" as "spring", stiffness: 260, damping: 18 },
+    scale: 1.02,
+    boxShadow: "0 8px 32px rgba(59, 130, 246, 0.1)",
+    transition: { type: "spring" as const, stiffness: 260, damping: 18 },
   },
   whileTap: {
     scale: 0.97,
-    transition: { type: "spring" as "spring", stiffness: 300, damping: 22 },
+    transition: { type: "spring" as const, stiffness: 300, damping: 22 },
   },
 };
 
@@ -106,7 +106,7 @@ const SocialLinks = ({ t }: any) => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center justify-center gap-3 px-5 py-4 rounded-2xl font-semibold transition-all duration-300 group ${link.color} shadow-md col-span-1 sm:col-span-2`}
+                className={`flex items-center justify-center gap-3 px-5 py-4 rounded-xl font-semibold transition-all duration-300 group ${link.color} shadow-lg hover:shadow-xl`}
                 style={{ minHeight: "56px" }}
                 variants={linkVariants}
                 initial="initial"
@@ -141,7 +141,7 @@ const SocialLinks = ({ t }: any) => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center justify-center gap-3 px-5 py-3 rounded-xl font-semibold transition-all duration-300 group ${link.color} shadow-md`}
+                className={`flex items-center justify-center gap-3 px-5 py-3 rounded-xl font-semibold transition-all duration-300 group ${link.color} shadow-lg hover:shadow-xl`}
                 variants={linkVariants}
                 initial="initial"
                 animate="animate"

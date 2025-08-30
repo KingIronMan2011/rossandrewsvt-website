@@ -1,29 +1,27 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
 import type { Variants } from "framer-motion";
 
 const cardVariants: Variants = {
-  initial: { opacity: 0, y: 30, scale: 0.97 },
+  initial: { opacity: 0, y: 20, scale: 0.95 },
   animate: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring" as const, stiffness: 180, damping: 20 },
+    transition: { type: "spring", stiffness: 150, damping: 20 },
   },
-  exit: { opacity: 0, y: 30, scale: 0.97, transition: { duration: 0.18 } },
+  exit: { opacity: 0, y: 20, scale: 0.95, transition: { duration: 0.2 } },
   whileHover: {
-    scale: 1.06,
-    boxShadow: "0 12px 36px 0 rgba(59,130,246,0.13)",
-    zIndex: 2,
-    transition: { type: "spring" as const, stiffness: 300, damping: 18 },
+    scale: 1.02,
+    boxShadow: "0 8px 24px rgba(59, 130, 246, 0.1)",
+    transition: { type: "spring", stiffness: 250, damping: 20 },
   },
 };
 
 const listVariants = {
   initial: {},
-  animate: { transition: { staggerChildren: 0.04 } },
+  animate: { transition: { staggerChildren: 0.05 } },
   exit: {},
 };
 
@@ -42,13 +40,12 @@ const ArtistCard = ({
     href={url}
     target="_blank"
     rel="noopener noreferrer"
-    className="group flex flex-col items-start gap-2 p-6 rounded-2xl
-      bg-gradient-to-br from-white/90 via-blue-50/80 to-white/90 dark:from-gray-800/90 dark:via-blue-900/60 dark:to-gray-800/90
-      border border-gray-200/60 dark:border-gray-700/60
-      shadow-lg
+    className="group flex flex-col justify-between p-6 rounded-xl
+      bg-white dark:bg-gray-800
+      border border-gray-200 dark:border-gray-700
+      shadow-sm hover:shadow-md
       transition-all duration-300 ease-out
-      backdrop-blur-sm"
-    style={{ minHeight: 110 }}
+      min-h-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500"
     variants={cardVariants}
     initial="initial"
     animate="animate"
@@ -57,56 +54,22 @@ const ArtistCard = ({
     whileFocus="whileHover"
     layout
   >
-    <motion.div
-      className="flex items-center gap-3 w-full"
-      initial={{ opacity: 0, x: -16 }}
-      animate={{
-        opacity: 1,
-        x: 0,
-        transition: { duration: 0.35, type: "spring", stiffness: 180 },
-      }}
-      exit={{ opacity: 0, x: -16, transition: { duration: 0.15 } }}
-      layout
-    >
-      <span className="flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
-        {icon || <ExternalLink size={24} />}
+    <div className="flex items-center gap-3 mb-2">
+      <span className="flex-shrink-0 text-gray-600 dark:text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
+        {icon || <ExternalLink size={20} />}
       </span>
-      <span
-        className="font-semibold text-lg text-gray-800 dark:text-white break-words
-        transition-colors duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400"
-      >
+      <span className="font-medium text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 break-words">
         {name}
       </span>
-    </motion.div>
+    </div>
     {description && (
-      <motion.span
-        className="block text-base text-gray-600 dark:text-gray-300 mt-1 break-words
-        transition-colors duration-300"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.4, type: "spring", stiffness: 140 },
-        }}
-        exit={{ opacity: 0, y: 10, transition: { duration: 0.15 } }}
-        layout
-      >
+      <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed break-words">
         {description}
-      </motion.span>
+      </span>
     )}
-    <motion.div
-      initial={{ opacity: 0, x: 10 }}
-      animate={{ opacity: 0.6, x: 0, transition: { duration: 0.4 } }}
-      exit={{ opacity: 0, x: 10, transition: { duration: 0.15 } }}
-      whileHover={{ opacity: 1, x: 4, y: -4, color: "#3b82f6" }}
-      className="mt-2 self-end transition-all duration-300"
-      layout
-    >
-      <ExternalLink
-        size={20}
-        className="transition-all duration-300 group-hover:text-blue-500 dark:group-hover:text-blue-400"
-      />
-    </motion.div>
+    <div className="self-end mt-4 text-gray-400 dark:text-gray-500 group-hover:text-blue-500 transition-colors duration-300">
+      <ExternalLink size={18} />
+    </div>
   </motion.a>
 );
 
@@ -117,37 +80,33 @@ const Section = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <section className="mt-14 relative z-0 px-2 sm:px-0">
+  <section className="mt-12 px-4 sm:px-0">
     <motion.div
-      className="bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-md border border-gray-100/60 dark:border-gray-800/60 py-8 px-2 sm:px-8 transition-all duration-500"
-      initial={{ opacity: 0, y: 24 }}
+      className="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 py-8 px-6 sm:px-8"
+      initial={{ opacity: 0, y: 20 }}
       animate={{
         opacity: 1,
         y: 0,
         transition: { type: "spring", stiffness: 100, damping: 18 },
       }}
-      exit={{ opacity: 0, y: 24, transition: { duration: 0.18 } }}
+      exit={{ opacity: 0, y: 20, transition: { duration: 0.2 } }}
       layout
     >
       <motion.h3
-        className="text-lg md:text-xl font-bold text-gray-800 dark:text-white mb-7
-        text-center transition-colors duration-300
-        after:content-[''] after:block after:w-24 after:h-1 after:mx-auto after:mt-2
-        after:bg-gradient-to-r after:from-blue-500/0 after:via-blue-500 after:to-blue-500/0
-        dark:after:from-blue-400/0 dark:after:via-blue-400 dark:after:to-blue-400/0"
+        className="text-xl font-semibold text-gray-900 dark:text-white mb-8 text-center"
         initial={{ opacity: 0, y: -10 }}
         animate={{
           opacity: 1,
           y: 0,
           transition: { duration: 0.5, type: "spring", stiffness: 120 },
         }}
-        exit={{ opacity: 0, y: -10, transition: { duration: 0.18 } }}
+        exit={{ opacity: 0, y: -10, transition: { duration: 0.2 } }}
         layout
       >
         {title}
       </motion.h3>
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 max-w-3xl mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
         variants={listVariants}
         initial="initial"
         animate="animate"
@@ -166,37 +125,37 @@ const ArtSections = ({ t }: any) => {
       name: t("artistNames.vexivy404"),
       description: t("artistDescriptions.modelArt"),
       url: "https://x.com/vlutchlab",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.JayIllustrator"),
       description: t("artistDescriptions.banners"),
       url: "https://x.com/JayIllustrator",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.dankpunc"),
       description: t("artistDescriptions.emotesBadges"),
       url: "https://x.com/dankpunc",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.lunamoonof27171"),
       description: t("artistDescriptions.model3d"),
       url: "https://x.com/lunamoonof27171",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.Micke_Creation"),
       description: t("artistDescriptions.loreAnim"),
       url: "https://x.com/Micke_Creation",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.lie_live2d"),
       description: t("artistDescriptions.loreVoice"),
       url: "https://x.com/lie_live2d",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
   ];
 
@@ -205,37 +164,37 @@ const ArtSections = ({ t }: any) => {
       name: t("artistNames.Daisy_bunnyy"),
       description: t("artistDescriptions.sketch1"),
       url: "https://x.com/Daisy_bunnyy",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.Niwyria"),
       description: t("artistDescriptions.sketch2"),
       url: "https://x.com/Niwyria",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.Floophy_Loo"),
       description: t("artistDescriptions.sketch3"),
       url: "https://x.com/Floophy_Loo",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.Bellestissa"),
       description: t("artistDescriptions.sketch4"),
       url: "https://x.com/Bellestissa",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.LenitaLenK"),
       description: t("artistDescriptions.sketch5"),
       url: "https://x.com/LenitaLenK",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
     {
       name: t("artistNames.seysech"),
       description: t("artistDescriptions.sketch6"),
       url: "https://x.com/seysech",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
   ];
 
@@ -244,7 +203,7 @@ const ArtSections = ({ t }: any) => {
       name: t("artistNames.dankpunc"),
       description: t("artistDescriptions.fanart"),
       url: "https://x.com/dankpunc",
-      icon: <FaXTwitter size={22} color="#000" />,
+      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
     },
   ];
 

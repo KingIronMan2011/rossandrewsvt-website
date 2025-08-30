@@ -1,89 +1,94 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import { Link } from "react-router-dom";
 
-const footerVariants: any = {
-  initial: { opacity: 0, y: 30 },
+const footerVariants: Variants = {
+  initial: { opacity: 0, y: 20 },
   animate: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 80, damping: 18 },
+    transition: { type: "spring", stiffness: 100, damping: 20 },
   },
 };
 
-const linkVariants = {
+const linkVariants: Variants = {
   initial: { opacity: 0, y: 10 },
   animate: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.2 + i * 0.08, duration: 0.4 },
+    transition: { delay: 0.2 + i * 0.1, duration: 0.4, type: "spring", stiffness: 120 },
   }),
 };
 
 const Footer = ({ t }: any) => (
   <motion.footer
-    className="w-full flex flex-col items-center py-8 text-sm text-gray-500 bg-white/80 dark:bg-gray-900/80 rounded-b-xl shadow-inner transition-all duration-500"
+    className="w-full flex flex-col items-center py-10 px-4 text-sm text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-all duration-500"
     variants={footerVariants}
     initial="initial"
     animate="animate"
   >
+    {/* Copyright Section */}
     <motion.div
-      className="mb-2 text-center"
+      className="text-center mb-6"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1, duration: 0.5, type: "tween" }}
+      transition={{ delay: 0.1, duration: 0.5, type: "spring", stiffness: 120 }}
     >
-      &copy; {new Date().getFullYear()}{" "}
-      <span className="font-semibold text-gray-700 dark:text-gray-200 transition-colors duration-300">
-        {t("profile.realName")}
-      </span>
-      . {t("footer.rights", "All rights reserved.")}{" "}
+      <p className="text-base font-medium text-gray-800 dark:text-gray-200">
+        &copy; {new Date().getFullYear()}{" "}
+        <span className="font-semibold text-gray-900 dark:text-white">
+          {t("profile.realName")}
+        </span>
+        . {t("footer.rights", "All rights reserved.")}
+      </p>
     </motion.div>
-    <div className="flex gap-6 mt-1">
+
+    {/* Links Section */}
+    <div className="flex flex-wrap justify-center gap-6 mb-4">
       {[
         {
-          href: "/privacy-policy",
+          to: "/privacy-policy",
           label: t("privacyPolicy", "Privacy Policy"),
         },
         {
-          href: "/terms-of-service",
+          to: "/terms-of-service",
           label: t("termsOfService", "Terms of Service"),
         },
       ].map((link, i) => (
-        <motion.a
-          key={link.href}
-          href={link.href}
-          className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+        <motion.div
+          key={link.to}
+          className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
           variants={linkVariants}
           initial="initial"
           animate="animate"
           custom={i}
         >
-          {link.label}
-        </motion.a>
+          <Link
+            to={link.to}
+          >
+            {link.label}
+          </Link>
+        </motion.div>
       ))}
-      <motion.span
-        className="text-gray-300 dark:text-gray-600"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.32, duration: 0.3 }}
-      >
-        |
-      </motion.span>
     </div>
+
+    {/* Made By Section */}
     <motion.div
-      className="mt-2 text-xs text-gray-400 dark:text-gray-500"
-      initial={{ opacity: 0, y: 8 }}
+      className="text-center"
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.4, duration: 0.4 }}
+      transition={{ delay: 0.4, duration: 0.4, type: "spring", stiffness: 120 }}
     >
-      {t("footer.madeBy", "Made by")}{" "}
-      <a
-        href="https://github.com/KingIronMan2011"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-semibold hover:underline text-blue-600 dark:text-blue-400"
-      >
-        KingIronMan2011
-      </a>
+      <p className="text-sm text-gray-500 dark:text-gray-500">
+        {t("footer.madeBy", "Made by")}{" "}
+        <a
+          href="https://github.com/KingIronMan2011"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+        >
+          KingIronMan2011
+        </a>
+      </p>
     </motion.div>
   </motion.footer>
 );
