@@ -25,6 +25,28 @@ export const ro = {
         "Doar un semi-vampir prietenos aici să vă distreze pe toți!",
         "Creditele pentru fiecare artist mai jos!",
       ].join("\n\n"),
+      links: [
+        {
+          label: "Twitch",
+          url: "https://twitch.tv/rossandrewsvt",
+        },
+        {
+          label: "Twitter",
+          url: "https://twitter.com/rossandrewsvt",
+        },
+        {
+          label: "YouTube",
+          url: "https://youtube.com/@rossandrewsvt",
+        },
+        {
+          label: "Discord",
+          url: "https://discord.gg/2mMB2u5c6H",
+        },
+        {
+          label: "Donează",
+          url: "https://streamelements.com/rossandrewsvt/tip",
+        },
+      ],
     },
     sections: {
       aboutMe: "Despre mine",

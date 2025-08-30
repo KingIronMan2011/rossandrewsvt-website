@@ -43,7 +43,7 @@ export const de = {
           url: "https://discord.gg/2mMB2u5c6H",
         },
         {
-          label: "Tip",
+          label: "Spenden",
           url: "https://streamelements.com/rossandrewsvt/tip",
         },
       ],
