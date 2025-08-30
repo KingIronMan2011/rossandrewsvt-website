@@ -125,37 +125,49 @@ const ArtSections = ({ t }: any) => {
       name: t("artistNames.vexivy404"),
       description: t("artistDescriptions.modelArt"),
       url: "https://x.com/vlutchlab",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.JayIllustrator"),
       description: t("artistDescriptions.banners"),
       url: "https://x.com/JayIllustrator",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.dankpunc"),
       description: t("artistDescriptions.emotesBadges"),
       url: "https://x.com/dankpunc",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.lunamoonof27171"),
       description: t("artistDescriptions.model3d"),
       url: "https://x.com/lunamoonof27171",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.Micke_Creation"),
       description: t("artistDescriptions.loreAnim"),
       url: "https://x.com/Micke_Creation",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.lie_live2d"),
       description: t("artistDescriptions.loreVoice"),
       url: "https://x.com/lie_live2d",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
   ];
 
@@ -164,37 +176,49 @@ const ArtSections = ({ t }: any) => {
       name: t("artistNames.Daisy_bunnyy"),
       description: t("artistDescriptions.sketch1"),
       url: "https://x.com/Daisy_bunnyy",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.Niwyria"),
       description: t("artistDescriptions.sketch2"),
       url: "https://x.com/Niwyria",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.Floophy_Loo"),
       description: t("artistDescriptions.sketch3"),
       url: "https://x.com/Floophy_Loo",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.Bellestissa"),
       description: t("artistDescriptions.sketch4"),
       url: "https://x.com/Bellestissa",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.LenitaLenK"),
       description: t("artistDescriptions.sketch5"),
       url: "https://x.com/LenitaLenK",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
     {
       name: t("artistNames.seysech"),
       description: t("artistDescriptions.sketch6"),
       url: "https://x.com/seysech",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
   ];
 
@@ -203,7 +227,9 @@ const ArtSections = ({ t }: any) => {
       name: t("artistNames.dankpunc"),
       description: t("artistDescriptions.fanart"),
       url: "https://x.com/dankpunc",
-      icon: <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />,
+      icon: (
+        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+      ),
     },
   ];
 

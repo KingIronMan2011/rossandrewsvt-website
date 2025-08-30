@@ -47,7 +47,12 @@ const Header = ({
             animate={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.2, duration: 0.5, type: "spring", stiffness: 120 },
+              transition: {
+                delay: 0.2,
+                duration: 0.5,
+                type: "spring",
+                stiffness: 120,
+              },
             }}
           >
             <LanguageSelector />
@@ -72,7 +77,12 @@ const Header = ({
             animate={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.2, duration: 0.5, type: "spring", stiffness: 120 },
+              transition: {
+                delay: 0.2,
+                duration: 0.5,
+                type: "spring",
+                stiffness: 120,
+              },
             }}
           >
             <ThemeToggle />

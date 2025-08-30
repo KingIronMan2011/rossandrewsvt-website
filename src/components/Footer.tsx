@@ -15,7 +15,12 @@ const linkVariants: Variants = {
   animate: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.2 + i * 0.1, duration: 0.4, type: "spring", stiffness: 120 },
+    transition: {
+      delay: 0.2 + i * 0.1,
+      duration: 0.4,
+      type: "spring",
+      stiffness: 120,
+    },
   }),
 };
 
@@ -62,11 +67,7 @@ const Footer = ({ t }: any) => (
           animate="animate"
           custom={i}
         >
-          <Link
-            to={link.to}
-          >
-            {link.label}
-          </Link>
+          <Link to={link.to}>{link.label}</Link>
         </motion.div>
       ))}
     </div>
