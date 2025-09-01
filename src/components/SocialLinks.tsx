@@ -47,7 +47,7 @@ const SocialLinks = ({ t }: any) => {
       label: t("profile.links.1.label"),
       url: t("profile.links.1.url"),
       icon: <FaXTwitter size={22} />,
-      color: "bg-blue-600 text-white hover:bg-blue-700",
+      color: "bg-black text-white hover:bg-black",
       wide: false,
     },
     {
@@ -70,7 +70,7 @@ const SocialLinks = ({ t }: any) => {
       icon: <FaMoneyBillWave size={24} />,
       color:
         "bg-green-600 text-white hover:bg-green-700 font-bold text-lg border-2 border-green-300",
-      wide: true,
+      wide: false,
     },
   ];
 
