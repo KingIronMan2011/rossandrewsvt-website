@@ -2,6 +2,7 @@ import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "./context/ThemeContext";
 import { BrowserRouter } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"
 import App from "./App.tsx";
 import "./i18n";
 import "./index.css";
@@ -27,6 +28,7 @@ createRoot(document.getElementById("root")!).render(
     <ThemeProvider>
       <BrowserRouter>
         <Root />
+        <Analytics />
       </BrowserRouter>
     </ThemeProvider>
   </StrictMode>,
