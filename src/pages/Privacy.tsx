@@ -45,10 +45,10 @@ const Privacy = () => {
   const sections: Record<string, React.ReactNode> = {
     introduction: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("privacy.introductionTitle", "Introduction")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "privacy.introductionText",
             "This is a personal website and it does not collect, store, or share any personal data from visitors.",
@@ -58,10 +58,10 @@ const Privacy = () => {
     ),
     informationCollection: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("privacy.informationCollectionTitle", "Information Collection")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "privacy.informationCollectionText",
             "We do not collect any personal information from you when you visit this website.",
@@ -71,10 +71,10 @@ const Privacy = () => {
     ),
     useOfInformation: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("privacy.useOfInformationTitle", "Use of Information")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "privacy.useOfInformationText",
             "Since no information is collected, no information is used or processed in any way.",
@@ -84,10 +84,10 @@ const Privacy = () => {
     ),
     dataSecurity: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("privacy.dataSecurityTitle", "Data Security")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "privacy.dataSecurityText",
             "As no personal data is collected or stored, there are no security risks regarding your personal information on this website.",
@@ -97,10 +97,10 @@ const Privacy = () => {
     ),
     contactUs: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("privacy.contactUsTitle", "Contact Us")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "privacy.contactUsText",
             "If you have any questions about this Privacy Policy, please contact us at",
@@ -125,7 +125,7 @@ const Privacy = () => {
       animate="visible"
     >
       <motion.h1
-        className="text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center"
+        className="text-3xl font-bold mb-8 text-zinc-900 dark:text-white text-center"
         variants={headingVariants}
         initial="hidden"
         animate="visible"
@@ -133,7 +133,7 @@ const Privacy = () => {
         {t("privacy.title", "Privacy Policy")}
       </motion.h1>
       <motion.div
-        className="space-y-8 text-gray-700 dark:text-gray-200 text-base leading-relaxed bg-white/95 dark:bg-gray-800/95 backdrop-blur-lg rounded-2xl shadow-lg p-8 md:p-10 transition-all duration-500 hover:shadow-xl border border-gray-100 dark:border-gray-700"
+        className="space-y-8 text-zinc-700 dark:text-zinc-200 text-base leading-relaxed bg-white/95 dark:bg-zinc-800/95 backdrop-blur-lg rounded-2xl shadow-lg p-8 md:p-10 transition-all duration-500 hover:shadow-xl border border-zinc-100 dark:border-zinc-700"
         initial="hidden"
         animate="visible"
         variants={containerVariants}

@@ -18,7 +18,7 @@ const LanguageOption = ({
     className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ease-in-out ${
       isActive
         ? "bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 shadow-sm"
-        : "hover:bg-gray-50 dark:hover:bg-gray-700/50 text-gray-700 dark:text-gray-300 hover:shadow-sm"
+        : "hover:bg-zinc-50 dark:hover:bg-zinc-700/50 text-zinc-700 dark:text-zinc-300 hover:shadow-sm"
     }`}
   >
     {isActive && <Check className="w-4 h-4 text-blue-600 dark:text-blue-400" />}
@@ -51,19 +51,19 @@ export function LanguageSelector() {
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen((v) => !v)}
-        className="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 ease-in-out hover:scale-105"
+        className="flex items-center gap-2 p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300 ease-in-out hover:scale-105"
         aria-label="Select language"
       >
-        <Globe className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+        <Globe className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
         <ChevronDown
-          className={`w-4 h-4 text-gray-400 transition-transform duration-300 ease-in-out ${
+          className={`w-4 h-4 text-zinc-400 transition-transform duration-300 ease-in-out ${
             isOpen ? "rotate-180" : ""
           }`}
         />
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 p-2 focus:outline-none transform origin-top-right transition-all duration-300 ease-out scale-100 opacity-100">
+        <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-zinc-800 rounded-xl shadow-lg ring-1 ring-zinc-200 dark:ring-zinc-700 p-2 focus:outline-none transform origin-top-right transition-all duration-300 ease-out scale-100 opacity-100">
           {Object.entries(t("language.options", { returnObjects: true })).map(
             ([code, name]) => (
               <LanguageOption

@@ -41,8 +41,8 @@ const ArtistCard = ({
     target="_blank"
     rel="noopener noreferrer"
     className="group flex flex-col justify-between p-6 rounded-xl
-      bg-white dark:bg-gray-800
-      border border-gray-200 dark:border-gray-700
+      bg-white dark:bg-zinc-800
+      border border-zinc-200 dark:border-zinc-700
       shadow-sm hover:shadow-md
       transition-all duration-300 ease-out
       min-h-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -55,19 +55,19 @@ const ArtistCard = ({
     layout
   >
     <div className="flex items-center gap-3 mb-2">
-      <span className="flex-shrink-0 text-gray-600 dark:text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
+      <span className="flex-shrink-0 text-zinc-600 dark:text-zinc-400 group-hover:text-blue-500 transition-colors duration-300">
         {icon || <ExternalLink size={20} />}
       </span>
-      <span className="font-medium text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 break-words">
+      <span className="font-medium text-lg text-zinc-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 break-words">
         {name}
       </span>
     </div>
     {description && (
-      <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed break-words">
+      <span className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed break-words">
         {description}
       </span>
     )}
-    <div className="self-end mt-4 text-gray-400 dark:text-gray-500 group-hover:text-blue-500 transition-colors duration-300">
+    <div className="self-end mt-4 text-zinc-400 dark:text-zinc-500 group-hover:text-blue-500 transition-colors duration-300">
       <ExternalLink size={18} />
     </div>
   </motion.a>
@@ -82,7 +82,7 @@ const Section = ({
 }) => (
   <section className="mt-12 px-4 sm:px-0">
     <motion.div
-      className="bg-gray-50 dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 py-8 px-6 sm:px-8"
+      className="bg-zinc-50 dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800 py-8 px-6 sm:px-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{
         opacity: 1,
@@ -93,7 +93,7 @@ const Section = ({
       layout
     >
       <motion.h3
-        className="text-xl font-semibold text-gray-900 dark:text-white mb-8 text-center"
+        className="text-xl font-semibold text-zinc-900 dark:text-white mb-8 text-center"
         initial={{ opacity: 0, y: -10 }}
         animate={{
           opacity: 1,
@@ -126,7 +126,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.modelArt"),
       url: "https://x.com/vlutchlab",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -134,7 +134,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.banners"),
       url: "https://x.com/JayIllustrator",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -142,7 +142,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.emotesBadges"),
       url: "https://x.com/dankpunc",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -150,7 +150,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.model3d"),
       url: "https://x.com/lunamoonof27171",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -158,7 +158,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.loreAnim"),
       url: "https://x.com/Micke_Creation",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -166,7 +166,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.loreVoice"),
       url: "https://x.com/lie_live2d",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
   ];
@@ -177,7 +177,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.sketch1"),
       url: "https://x.com/Daisy_bunnyy",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -185,7 +185,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.sketch2"),
       url: "https://x.com/Niwyria",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -193,7 +193,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.sketch3"),
       url: "https://x.com/Floophy_Loo",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -201,7 +201,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.sketch4"),
       url: "https://x.com/Bellestissa",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -209,7 +209,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.sketch5"),
       url: "https://x.com/LenitaLenK",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
     {
@@ -217,7 +217,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.sketch6"),
       url: "https://x.com/seysech",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
   ];
@@ -228,7 +228,7 @@ const ArtSections = ({ t }: any) => {
       description: t("artistDescriptions.fanart"),
       url: "https://x.com/dankpunc",
       icon: (
-        <FaXTwitter size={20} className="text-gray-600 dark:text-gray-400" />
+        <FaXTwitter size={20} className="text-zinc-600 dark:text-zinc-400" />
       ),
     },
   ];

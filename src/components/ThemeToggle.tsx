@@ -72,7 +72,7 @@ const ThemeToggle: React.FC = () => {
         ${
           theme === "light"
             ? "bg-white hover:bg-white"
-            : "bg-gray-800/60 hover:bg-gray-700/80"
+            : "bg-zinc-800/60 hover:bg-zinc-700/80"
         }
         transition-all duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500`}
       aria-label="Toggle theme"

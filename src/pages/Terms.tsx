@@ -44,12 +44,12 @@ const Terms = () => {
 
   const sections: Record<string, React.ReactNode> = {
     lastUpdated: (
-      <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+      <p className="text-sm text-zinc-500 dark:text-zinc-400 italic">
         <strong>{t("terms.lastUpdated", "Last updated:")}</strong> June 2025
       </p>
     ),
     intro: (
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+      <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
         {t(
           "terms.intro",
           "By accessing or using this website, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the site.",
@@ -58,10 +58,10 @@ const Terms = () => {
     ),
     useOfContent: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("terms.useOfContentTitle", "Use of Content")}
         </h2>
-        <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed">
+        <ul className="list-disc pl-6 space-y-2 text-zinc-700 dark:text-zinc-300 leading-relaxed">
           <li>
             {t(
               "terms.useOfContent1",
@@ -79,10 +79,10 @@ const Terms = () => {
     ),
     userConduct: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("terms.userConductTitle", "User Conduct")}
         </h2>
-        <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed">
+        <ul className="list-disc pl-6 space-y-2 text-zinc-700 dark:text-zinc-300 leading-relaxed">
           <li>
             {t(
               "terms.userConduct1",
@@ -100,10 +100,10 @@ const Terms = () => {
     ),
     disclaimer: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("terms.disclaimerTitle", "Disclaimer")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "terms.disclaimerText",
             'This website is provided "as is" without warranties of any kind. We do not guarantee the accuracy or completeness of any content.',
@@ -113,10 +113,10 @@ const Terms = () => {
     ),
     liability: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("terms.liabilityTitle", "Limitation of Liability")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "terms.liabilityText",
             "We are not liable for any damages or losses resulting from your use of this website.",
@@ -126,10 +126,10 @@ const Terms = () => {
     ),
     changes: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("terms.changesTitle", "Changes to Terms")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "terms.changesText",
             "We may update these Terms of Service at any time. Continued use of the site means you accept the updated terms.",
@@ -139,10 +139,10 @@ const Terms = () => {
     ),
     contact: (
       <>
-        <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
+        <h2 className="text-xl font-semibold mb-3 text-zinc-800 dark:text-white">
           {t("terms.contactTitle", "Contact")}
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
           {t(
             "terms.contactText",
             "If you have any questions about these Terms, please contact us at:",
@@ -166,7 +166,7 @@ const Terms = () => {
       animate="visible"
     >
       <motion.h1
-        className="text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center"
+        className="text-3xl font-bold mb-8 text-zinc-900 dark:text-white text-center"
         variants={headingVariants}
         initial="hidden"
         animate="visible"
@@ -174,7 +174,7 @@ const Terms = () => {
         {t("terms.title", "Terms of Service")}
       </motion.h1>
       <motion.div
-        className="space-y-8 text-gray-700 dark:text-gray-200 text-base leading-relaxed bg-white/95 dark:bg-gray-800/95 backdrop-blur-lg rounded-2xl shadow-lg p-8 md:p-10 transition-all duration-500 hover:shadow-xl border border-gray-100 dark:border-gray-700"
+        className="space-y-8 text-zinc-700 dark:text-zinc-200 text-base leading-relaxed bg-white/95 dark:bg-zinc-800/95 backdrop-blur-lg rounded-2xl shadow-lg p-8 md:p-10 transition-all duration-500 hover:shadow-xl border border-zinc-100 dark:border-zinc-700"
         initial="hidden"
         animate="visible"
         variants={containerVariants}

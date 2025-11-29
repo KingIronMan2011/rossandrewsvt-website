@@ -37,7 +37,7 @@ const ProfileCard = ({ t, handleCopy, copiedField, siteConfig }: any) => (
     }}
   >
     <motion.div
-      className="aspect-square w-full overflow-hidden rounded-xl shadow-lg transition-all duration-500 ease-in-out hover:shadow-xl border border-gray-200 dark:border-gray-700"
+      className="aspect-square w-full overflow-hidden rounded-xl shadow-lg transition-all duration-500 ease-in-out hover:shadow-xl border border-zinc-200 dark:border-zinc-700"
       whileHover={{
         scale: 1.02,
         boxShadow: "0 8px 32px rgba(59, 130, 246, 0.1)",
@@ -53,34 +53,34 @@ const ProfileCard = ({ t, handleCopy, copiedField, siteConfig }: any) => (
     </motion.div>
     <div className="mt-6 space-y-4">
       <motion.div
-        className="flex items-center gap-3 text-gray-700 dark:text-gray-200 transition-colors duration-300"
+        className="flex items-center gap-3 text-zinc-700 dark:text-zinc-200 transition-colors duration-300"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0, transition: { delay: 0.1 } }}
       >
-        <User className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+        <User className="w-5 h-5 text-zinc-500 dark:text-zinc-400" />
         <span className="text-lg font-semibold">{t("profile.realName")}</span>
       </motion.div>
       <motion.div
-        className="flex items-center gap-3 text-gray-700 dark:text-gray-200 transition-colors duration-300"
+        className="flex items-center gap-3 text-zinc-700 dark:text-zinc-200 transition-colors duration-300"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0, transition: { delay: 0.18 } }}
       >
-        <MapPin className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+        <MapPin className="w-5 h-5 text-zinc-500 dark:text-zinc-400" />
         <span className="text-base">{t("profile.location")}</span>
       </motion.div>
       <motion.div
-        className="flex items-center gap-3 text-gray-700 dark:text-gray-200 transition-colors duration-300"
+        className="flex items-center gap-3 text-zinc-700 dark:text-zinc-200 transition-colors duration-300"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0, transition: { delay: 0.26 } }}
       >
-        <AtSign className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+        <AtSign className="w-5 h-5 text-zinc-500 dark:text-zinc-400" />
         <span className="text-base truncate">{t("profile.email")}</span>
         <motion.button
           onClick={() => handleCopy(t("profile.email"), "email")}
           className={`ml-2 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600 ${
             copiedField === "email"
               ? "bg-green-100 dark:bg-green-900 scale-110"
-              : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
+              : "bg-zinc-100 dark:bg-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-600"
           }`}
           aria-label="Copy to clipboard"
           tabIndex={0}
@@ -110,7 +110,7 @@ const ProfileCard = ({ t, handleCopy, copiedField, siteConfig }: any) => (
                 exit="exit"
                 className="flex"
               >
-                <Copy className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                <Copy className="w-4 h-4 text-zinc-500 dark:text-zinc-400" />
               </motion.span>
             )}
           </AnimatePresence>

@@ -77,7 +77,7 @@ const SocialLinks = ({ t }: any) => {
   return (
     <div className="mt-10 z-0 relative">
       <motion.h3
-        className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white mb-5 transition-all duration-500 ease-in-out tracking-tight"
+        className="text-lg md:text-xl font-semibold text-zinc-800 dark:text-white mb-5 transition-all duration-500 ease-in-out tracking-tight"
         initial={{ opacity: 0, y: -12 }}
         animate={{
           opacity: 1,
